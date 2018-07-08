@@ -1,4 +1,4 @@
 Sorting algorithms which I have coding.
 
--Merge Sort.
--Insertion Sort.
+1.Merge Sort.
+2.Insertion Sort.
