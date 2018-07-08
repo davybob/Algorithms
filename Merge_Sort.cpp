@@ -48,7 +48,7 @@ int *MERGE(int Input[], int size){
 
 	int *l = (int*)calloc((size / 2) + 1, sizeof(int));
 	int *r = (int*)calloc((size / 2) + 1, sizeof(int));
-	
+
 	std::thread first (left,l,size,Input);
 	std::thread second (right, r, size, Input);
 
