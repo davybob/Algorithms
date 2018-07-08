@@ -48,28 +48,7 @@ int *MERGE(int Input[], int size){
 
 	int *l = (int*)calloc((size / 2) + 1, sizeof(int));
 	int *r = (int*)calloc((size / 2) + 1, sizeof(int));
-	/*
-//	printf("%d, \n", (size / 2) + 1);
-
-//	for (int i = 0; i < size; i++)
-//		printf("%d \n", Input[i]);
-
-	l = (int*)calloc((size / 2) + 1, sizeof(int));
-	r = (int*)calloc((size / 2) + 1, sizeof(int));
-
-
-
-
-	memcpy(l, Input, (size/2) * sizeof(int));
-	memcpy(r, Input + 5, (size / 2) * sizeof(int));
-
-//	for (int i = 0; i < sizeof(l); i++)
-//		printf("%d", l[i]);
-
-	l[(size / 2) + 1] = '@';
-	r[(size / 2) + 1] = '@';
-	*/
-
+	
 	std::thread first (left,l,size,Input);
 	std::thread second (right, r, size, Input);
 
