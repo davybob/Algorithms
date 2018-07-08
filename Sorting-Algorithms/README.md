@@ -1,4 +1,4 @@
-## Sorting algorithms which I have coding:
+## Sorting algorithms which I have coded:
 
 ⋅Merge Sort.
 
