@@ -4,4 +4,4 @@
                                                     Sorting Algorithms
                                              ------------------------------
 
-Collection of my attempts at coding various sorting algorithms.
+Collection of my attempts at coding various algorithms.
