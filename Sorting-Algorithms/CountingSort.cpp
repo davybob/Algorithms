@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-#define SIZEOF(x) (int)(sizeof(x) / sizeof(int))
+#include <iostream>
 
 void CountingSort(int *InArray,int *OutArray, int maxsize, int sizeofArray){
 	int *C = (int*)calloc(maxsize + 1, sizeof(int));
@@ -36,13 +35,21 @@ int findmax(int *Array, int maxsize){
 }
 
 int main(){
-	int InArray[] = { 2, 5, 3, 0, 2, 3, 0, 3, 8, 9, 2 };
-	size_t maxsize = SIZEOF(InArray);
-	int *OutArray = (int*)calloc(maxsize, sizeof(int));
+	int Number;
+	std::cout << "Please state amount of numbers to be sorted: ";
+	std::cin >> Number;
+	int *InArray = (int*)calloc(Number, sizeof(int));
+	std::cout << "\nPlease Input an array of numbers (seperated by spaces) to be sorted: ";
+	for (int i = 0; i < Number; i++)
+	{
+		std::cin >> InArray[i];
+	}
 
-	CountingSort(InArray, OutArray, findmax(InArray, maxsize), maxsize);
+	int *OutArray = (int*)calloc(Number, sizeof(int));
 
-	for (int i = 0; i < maxsize; i++)
+	CountingSort(InArray, OutArray, findmax(InArray, Number), Number);
+
+	for (int i = 0; i < Number; i++)
 	{
 		printf("%i ", OutArray[i]);
 	}
