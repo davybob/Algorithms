@@ -9,7 +9,7 @@ int Fitness(std::bitset<5> Population){
 }
 float ProbCont(float fitness, float sum){
   return fitness/sum;
-}
+}   
 float expected(int fitness, int avg){
   return fitness/avg;
 }
