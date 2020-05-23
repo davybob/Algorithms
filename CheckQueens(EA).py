@@ -70,12 +70,13 @@ def PickFiveRand(population, fitness):
 #Cut-and-crossfill new permutations
 def Mate(parents):
   random.seed(os.urandom(8), version=2)
-  position = random.randint(0,7)
+  #Split point between first and last of string (not including both)
+  position = random.randint(1,6)
   # Split at random point and mix parent 1 end split with parent 2 end split
-  c1 = parents[0][0:position]
-  c1.extend(parents[1][position:])
-  c2 = parents[1][0:position]
-  c2.extend(parents[0][position:])
+  c1 = parents[0][position:]
+  c1.extend(parents[1][0:position])
+  c2 = parents[1][position:]
+  c2.extend(parents[0][0:position])
   return c1, c2
 
 #Apply mutation
