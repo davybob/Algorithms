@@ -46,7 +46,6 @@ void create_spiral(char matrix[MAXSIZE][MAXSIZE], int stars, int posx, int posy)
 	int s = 1;
 	int direction = RIGHT;
 	while (stars > 0) {
-		std::cout << stars << " " << s << "\n";
 		if (stars < s)
 			move(matrix, direction, stars, posx, posy);
 		else
